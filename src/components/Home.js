@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 const Home = () => {
   return ( 
     <div>
-      <h1>movie app</h1>
+      <h1>The Movie Plug</h1>
       <SearchBar/>
     </div>
    );
