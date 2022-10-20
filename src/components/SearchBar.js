@@ -7,7 +7,7 @@ const SearchBar = () => {
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
       <FormControl variant="standard">
         <InputLabel htmlFor="input-with-icon-adornment">
-          Search
+          Find a Movie
         </InputLabel>
         <Input
           id="input-with-icon-adornment"
@@ -18,7 +18,7 @@ const SearchBar = () => {
           }
         />
         <Button variant="outlined">
-          Delete
+          Search
         </Button>
       </FormControl>
     </Box>
