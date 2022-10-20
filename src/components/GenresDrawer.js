@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -13,7 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 export default function TemporaryDrawer() {
   const [state, setState] = useState(false);
   const [genres, setGenres] = useState([]);
-
+  const navigate = useNavigate();
 
   const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -36,10 +37,6 @@ export default function TemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-const clickHandler=()=>{
-  
-}
-
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -50,7 +47,7 @@ const clickHandler=()=>{
       <List>
         {genres.map((genre) => (
           <ListItem key={genre.id} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={()=>{navigate(`/genres/${genre.name}`)}}>
               <ListItemText primary={genre.name} />
             </ListItemButton>
           </ListItem>
