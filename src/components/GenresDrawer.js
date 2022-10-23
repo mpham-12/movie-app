@@ -47,7 +47,7 @@ export default function TemporaryDrawer() {
       <List>
         {genres.map((genre) => (
           <ListItem key={genre.id} disablePadding>
-            <ListItemButton onClick={()=>{navigate(`/genres/${genre.name}`)}}>
+            <ListItemButton onClick={()=>{navigate(`/genres/${genre.id}/${genre.name}`)}}>
               <ListItemText primary={genre.name} />
             </ListItemButton>
           </ListItem>
