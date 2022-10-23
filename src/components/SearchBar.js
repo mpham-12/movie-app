@@ -2,7 +2,9 @@ import * as React from 'react';
 import { Button, Input, InputLabel, InputAdornment, FormControl, Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+
+
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
       <FormControl variant="standard">
@@ -17,7 +19,7 @@ const SearchBar = () => {
             </InputAdornment>
           }
         />
-        <Button variant="outlined">
+        <Button variant="outlined" onClick={props.onSearch}>
           Search
         </Button>
       </FormControl>
