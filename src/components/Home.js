@@ -10,7 +10,7 @@ import UpcomingMovies from "./UpcomingMovies";
 const Home = () => {
 
   return (
-    <div>
+    <div className="App">
       <h1>PluggedIn</h1>
       <GenresDrawer />
       <SearchBar/>

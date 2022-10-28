@@ -13,7 +13,6 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/genres/:genreId/:genreName' element={<Genre />} />
-
           </Routes>
         </Router>
     );

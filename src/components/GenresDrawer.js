@@ -11,6 +11,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
+
 export default function TemporaryDrawer() {
   const [state, setState] = useState(false);
   const [genres, setGenres] = useState([]);
@@ -43,11 +44,13 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style={{ backgroundColor: 'rgba(27, 27, 27, 1)', color:'white', height:'100%' }}
+
     >
       <List>
         {genres.map((genre) => (
           <ListItem key={genre.id} disablePadding>
-            <ListItemButton onClick={()=>{navigate(`/genres/${genre.id}/${genre.name}`)}}>
+            <ListItemButton onClick={() => { navigate(`/genres/${genre.id}/${genre.name}`) }}>
               <ListItemText primary={genre.name} />
             </ListItemButton>
           </ListItem>
@@ -58,17 +61,16 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <React.Fragment>
-        <Button onClick={toggleDrawer('left', true)}>Genres</Button>
-        <Drawer
-          anchor={'left'}
-          open={state['left']}
-          onClose={toggleDrawer('left', false)}
-        >
-          {list('left')}
-        </Drawer>
+      <Button onClick={toggleDrawer('left', true)}>Genres</Button>
+      <Drawer
+        anchor={'left'}
+        open={state['left']}
+        onClose={toggleDrawer('left', false)}
+        style={{ backgroundColor: '0,0,0,0.5' }}
+      >
+        {list('left')}
+      </Drawer>
 
-      </React.Fragment>
     </div>
   );
 }
