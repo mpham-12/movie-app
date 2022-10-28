@@ -3,6 +3,7 @@ import { Button, Input, InputLabel, InputAdornment, FormControl, Box } from '@mu
 import SearchIcon from '@mui/icons-material/Search';
 import { useState, useEffect } from 'react';
 import SearchResults from './SearchResults';
+import classes from './SearchBar.module.css'
 
 const SearchBar = (props) => {
   const [searchResults, setSearchResults] = useState(false);
@@ -29,10 +30,10 @@ const SearchBar = (props) => {
   }
 
   return (
-    <div>
-      <Box sx={{ '& > :not(style)': { m: 1 } }}>
-        <FormControl variant="standard" onSubmit={submitHandler}>
-          <InputLabel htmlFor="input-with-icon-adornment">
+    <div >
+      <Box sx={{ '& > :not(style)': { m: 1 } }} className={classes.search}>
+        <FormControl variant="standard" onSubmit={submitHandler} className={classes.form}>
+          <InputLabel htmlFor="input-with-icon-adornment"className={classes.label}>
             Find a Movie
           </InputLabel>
           <Input
@@ -43,12 +44,16 @@ const SearchBar = (props) => {
               </InputAdornment>
             }
             value={query}
-            onChange={queryHandler}
+            onChange={submitHandler}
+            className={classes.searchBar}
           />
-          <Button variant="outlined" >
+          <div className={classes.button}>
+          <Button className={classes.searchButton} variant="outlined" >
             Search
           </Button>
+          </div>
         </FormControl>
+        
       </Box>
 
       {searchResults && <SearchResults onClose={closeSearchResults} queryInput={query} />}
