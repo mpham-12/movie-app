@@ -3,6 +3,10 @@
 
 }
 
+.featuredTitle{
+  color: rgb(196, 195, 195);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
