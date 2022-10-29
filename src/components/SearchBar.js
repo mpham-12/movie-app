@@ -6,23 +6,18 @@ import SearchResults from './SearchResults';
 import classes from './SearchBar.module.css'
 
 const SearchBar = (props) => {
-  const [searchResults, setSearchResults] = useState(false);
   const [query, setQuery] = useState('');
-
-  const submitHandler = (e) => {
-    e.preventDefault()
-    setSearchResults(true);
-    console.log('FORMS UBMITTED???')
-
-    setQuery('');
-  }
 
   const queryHandler = (e) => {
     setQuery(e.target.value);
   }
 
-  const closeSearchResults = () => {
-    setSearchResults(false);
+  const submitHandler = (e) => {
+    e.preventDefault()
+    console.log('FORMS UBMITTED???')
+
+    props.onSearch(query)
+    setQuery('');
   }
 
   const handleSearch = (e) => {
@@ -31,8 +26,8 @@ const SearchBar = (props) => {
 
   return (
     <div >
-      <Box sx={{ '& > :not(style)': { m: 1 } }} className={classes.search}>
-        <FormControl variant="standard" onSubmit={submitHandler} className={classes.form}>
+      {/* <Box sx={{ '& > :not(style)': { m: 1 } }} className={classes.search}>
+        <FormControl variant="standard" onSubmit={submitHandler} className={classes.form} action="#">
           <InputLabel htmlFor="input-with-icon-adornment"className={classes.label}>
             Find a Movie
           </InputLabel>
@@ -44,19 +39,29 @@ const SearchBar = (props) => {
               </InputAdornment>
             }
             value={query}
-            onChange={submitHandler}
+            onChange={queryHandler}
             className={classes.searchBar}
           />
           <div className={classes.button}>
-          <Button className={classes.searchButton} variant="outlined" >
+          <Button type='submit' className={classes.searchButton} variant="outlined" >
             Search
           </Button>
           </div>
         </FormControl>
         
-      </Box>
+      </Box> */}
 
-      {searchResults && <SearchResults onClose={closeSearchResults} queryInput={query} />}
+      <form onSubmit={submitHandler}>
+        <input
+          type="text"
+          value={query}
+          onChange={queryHandler}
+          className={classes.searchBar} />
+        <button type='submit' className={classes.searchButton} variant="outlined" >
+          Search
+        </button>
+      </form>
+
     </div>
   );
 }
