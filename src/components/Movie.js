@@ -15,12 +15,18 @@ const Movie = (props) => {
   }
 
   const movieModal =
-    <div>
-      {props.title}
-      {props.image}
-      {props.description}
-      {props.rating}
-      {props.releaseDate}
+    <div className={classes.popup}>
+      <div>
+      <img className={classes.movieImgPopUp} src={`https://image.tmdb.org/t/p/w200/${props.image}`} alt="" />
+      </div>
+      <div className={classes.movieDesc}>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
+      <h3 className={classes.detailHeaders}>Average Rating</h3>
+      <p className={classes.rating}>{props.rating}/10</p>
+      <h3 className={classes.detailHeaders}>Release Date</h3>
+      <p className={classes.releaseDate}>{props.releaseDate}</p>
+      </div>
     </div>
 
   return (
@@ -28,7 +34,6 @@ const Movie = (props) => {
       <div className={classes.movie} onClick={openModal}>
         {/* {props.title} */}
         <img className={classes.movieImg} src={`https://image.tmdb.org/t/p/w200/${props.image}`} alt="" />
-        {props.rating}
       </div>
       {isModalOpen && <MoviePopUp onCloseModal={closeModal} movieDetails={movieModal} />}
     </>
