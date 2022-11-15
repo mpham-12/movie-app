@@ -4,15 +4,24 @@ import { useState } from "react";
 
 
 const Movie = (props) => {
-const [isModalOpen, setIsModalOpen]= useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal=()=>{
+  const openModal = () => {
     setIsModalOpen(true);
   }
 
-  const closeModal=()=>{
+  const closeModal = () => {
     setIsModalOpen(false);
   }
+
+  const movieModal =
+    <div>
+      {props.title}
+      {props.image}
+      {props.description}
+      {props.rating}
+      {props.releaseDate}
+    </div>
 
   return (
     <>
@@ -21,7 +30,7 @@ const [isModalOpen, setIsModalOpen]= useState(false);
         <img className={classes.movieImg} src={`https://image.tmdb.org/t/p/w200/${props.image}`} alt="" />
         {props.rating}
       </div>
-      {isModalOpen && <MoviePopUp onCloseModal={closeModal}></MoviePopUp>}
+      {isModalOpen && <MoviePopUp onCloseModal={closeModal} movieDetails={movieModal} />}
     </>
   );
 }

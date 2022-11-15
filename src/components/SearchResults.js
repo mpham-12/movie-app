@@ -10,7 +10,7 @@ const SearchResults = (props) => {
         SEARCH RESULTS
         <div className="moviesList">
         {props.queryResults.map((movie) => {
-          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} />
+          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} description={movie.overview} releaseDate={movie.release_date} />
         })}
         </div>
         <button onClick={props.onClose}> CLOSE</button>

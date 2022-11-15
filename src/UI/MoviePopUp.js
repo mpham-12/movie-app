@@ -24,8 +24,7 @@ const MoviePopUp = (props) => {
   return (
     <div className={classes.popup}>
       {ReactDOM.createPortal(<BackDrop onClose={props.onCloseModal}/>, portalElement)}
-      {ReactDOM.createPortal(<MovieOverlay>{props.children}</MovieOverlay>, portalElement)}
-
+      {ReactDOM.createPortal(<MovieOverlay>{props.movieDetails}</MovieOverlay>, portalElement)}
     </div>
   );
 }

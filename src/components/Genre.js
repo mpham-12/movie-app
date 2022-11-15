@@ -32,7 +32,7 @@ const Genre = (props) => {
       <button onClick={goToHomePage}>BACK</button>
       <h1>{genreName}: Now Playing</h1>
       {genreMovies.map((movie) => {
-        return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} />
+          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} description={movie.overview} releaseDate={movie.release_date} />
 
       })}
     </div>

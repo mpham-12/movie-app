@@ -24,7 +24,7 @@ const UpcomingMovies = () => {
       <h2 className='featuredTitle'>Coming Soon</h2>
       <div className="moviesList">
         {movies.map((movie) => {
-          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} />
+          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} description={movie.overview} releaseDate={movie.release_date} />
         })}
       </div>
     </div>
