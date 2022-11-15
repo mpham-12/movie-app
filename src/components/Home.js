@@ -10,7 +10,6 @@ import TopRatedMovies from "./TopRatedMovies";
 import UpcomingMovies from "./UpcomingMovies";
 import SearchResults from "./SearchResults";
 
-
 const Home = () => {
   const [queryResults, setQueryResults] = useState([]);
   const [searchResults, setSearchResults] = useState(false);

@@ -25,7 +25,7 @@ const SearchBar = (props) => {
   }
 
   return (
-    <div >
+    <div className={classes.search}>
       {/* <Box sx={{ '& > :not(style)': { m: 1 } }} className={classes.search}>
         <FormControl variant="standard" onSubmit={submitHandler} className={classes.form} action="#">
           <InputLabel htmlFor="input-with-icon-adornment"className={classes.label}>
@@ -51,15 +51,17 @@ const SearchBar = (props) => {
         
       </Box> */}
 
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className={classes.form}>
         <input
           type="text"
           value={query}
           onChange={queryHandler}
           className={classes.searchBar} />
-        <button type='submit' className={classes.searchButton} variant="outlined" >
-          Search
-        </button>
+        <div className={classes.button}>
+          <button type='submit' className={classes.searchButton} variant="outlined" >
+            Search
+          </button>
+        </div>
       </form>
 
     </div>
