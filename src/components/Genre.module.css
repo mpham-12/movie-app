@@ -18,7 +18,18 @@ html{
   background-color: transparent;
   border: 1px solid transparent;
   color: white;
+  font-size: 15px;
 }
+
 .backBtn:hover{
 cursor: pointer;
+}
+
+.header{
+  margin-left: 40px;
+}
+
+.genreName{
+  font-size: 28px;
+  margin-top: 8px;
 }

@@ -31,11 +31,13 @@ const Genre = (props) => {
   }
   return (
     <div>
+      <a href="/"><h1 className='appName'>PluggedIn</h1></a>
+      <div className={classes.header}>
       <button className={classes.backBtn} onClick={goToHomePage}>
         <span class="material-symbols-outlined">arrow_back</span> Back
       </button>
-
-      <h1>{genreName}: Now Playing</h1>
+      <h1 className={classes.genreName}>{genreName}: Now Playing</h1>
+      </div>
       <div className={classes.movies}>
         {genreMovies.map((movie) => {
           return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} description={movie.overview} releaseDate={movie.release_date} />
