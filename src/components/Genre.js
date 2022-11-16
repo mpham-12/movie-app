@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate  } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Movie from './Movie';
+import classes from './Genre.module.css'
+
 
 const Genre = (props) => {
   const [genreMovies, setGenreMovies] = useState([]);
@@ -29,12 +31,16 @@ const Genre = (props) => {
   }
   return (
     <div>
-      <button onClick={goToHomePage}>BACK</button>
-      <h1>{genreName}: Now Playing</h1>
-      {genreMovies.map((movie) => {
-          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} description={movie.overview} releaseDate={movie.release_date} />
+      <button className={classes.backBtn} onClick={goToHomePage}>
+        <span class="material-symbols-outlined">arrow_back</span> Back
+      </button>
 
-      })}
+      <h1>{genreName}: Now Playing</h1>
+      <div className={classes.movies}>
+        {genreMovies.map((movie) => {
+          return <Movie key={movie.id} title={movie.title} rating={movie.vote_average} image={movie.poster_path} description={movie.overview} releaseDate={movie.release_date} />
+        })}
+      </div>
     </div>
   );
 }

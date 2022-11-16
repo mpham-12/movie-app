@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
+
 .App {
   text-align: center;
-
 }
 
 .featuredTitle{
@@ -39,4 +40,15 @@
   width: 100%;
   overflow: scroll;
   height: 250px;
+}
+
+.appName{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 65px;
+  text-shadow: rgba(58, 199, 255, 0.826) 2px 4px 10px;
+}
+
+h2{
+  font-family: 'Bebas Neue', cursive;
+  margin-bottom: 0;
 }

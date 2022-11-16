@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className="App">
-      <h1>PluggedIn</h1>
+      <h1 className='appName'>PluggedIn</h1>
       <GenresDrawer />
       <SearchBar onSearch={getQuery} queryResults={queryResults}/>
       {searchResults && <SearchResults queryResults={queryResults} onClose={closeSearchResults}/>}
