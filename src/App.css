@@ -1,59 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&display=swap');
 
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.featuredTitle{
-  color: rgb(196, 195, 195);
+.featuredTitle {
+	color: rgb(196, 195, 195);
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
-.moviesList{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  overflow: scroll;
-  height: 250px;
+.moviesList {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	overflow: scroll;
+	height: 250px;
 }
 
-.appName{
-  font-family: 'Bebas Neue', cursive;
-  font-size: 65px;
-  text-shadow: rgba(58, 199, 255, 0.826) 2px 4px 10px;
-  text-align: center;
+.appName {
+	font-family: 'Bebas Neue', cursive;
+	font-size: 65px;
+	text-shadow: rgba(58, 199, 255, 0.826) 2px 4px 10px;
+	text-align: center;
 }
 
-h2{
-  font-family: 'Bebas Neue', cursive;
-  margin-bottom: 0;
+#appName {
+	margin-bottom: 0px;
 }
-a{
-  text-decoration: none;
-  color: white;
+
+h2 {
+	font-family: 'Bebas Neue', cursive;
+	margin-bottom: 0;
 }
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.navDrawer {
+	text-align: end;
+}
+

@@ -33,15 +33,17 @@ const Home = () => {
 
   return (
     <div className="App">
-      <a href="/"><h1 className='appName'>PluggedIn</h1></a>
-      <GenresDrawer />
-      <SearchBar onSearch={getQuery} queryResults={queryResults}/>
-      {searchResults && <SearchResults queryResults={queryResults} onClose={closeSearchResults}/>}
+          <a href="/"><h1 className='appName' id="appName">PluggedIn</h1></a>
+        <div className="navDrawer">
+          <GenresDrawer />
+        </div>
+      <SearchBar onSearch={getQuery} queryResults={queryResults} />
+      {searchResults && <SearchResults queryResults={queryResults} onClose={closeSearchResults} />}
       {/* {queryResults && <SearchResults onClose={closeSearchResults} queryResults={queryResults}/>} */}
       <TrendingMovies />
-      <TopRatedMovies/>
+      <TopRatedMovies />
       <NowPlayingMovies />
-      <UpcomingMovies/>
+      <UpcomingMovies />
     </div>
   );
 }

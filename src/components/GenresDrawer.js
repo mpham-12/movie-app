@@ -61,7 +61,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}>Genres</Button>
+      <Button style={{fontSize:"15px", marginRight:'20px'}} onClick={toggleDrawer('left', true)}>View Genres</Button>
       <Drawer
         anchor={'left'}
         open={state['left']}

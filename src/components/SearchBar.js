@@ -56,7 +56,8 @@ const SearchBar = (props) => {
           type="text"
           value={query}
           onChange={queryHandler}
-          className={classes.searchBar} />
+          className={classes.searchBar} 
+          placeholder='Enter a movie...'/>
         <div className={classes.button}>
           <button type='submit' className={classes.searchButton} variant="outlined" >
             Search
