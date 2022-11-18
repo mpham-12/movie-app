@@ -19,9 +19,7 @@ export default function TemporaryDrawer() {
   useEffect(() => {
     const getGenres = async () => {
       const res = await axios.get(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}&language=en-US`);
-
       const data = res.data;
-      console.log('GENRES', data.genres)
       setGenres(data.genres);
     }
     getGenres();
@@ -31,7 +29,6 @@ export default function TemporaryDrawer() {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
