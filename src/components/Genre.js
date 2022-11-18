@@ -34,7 +34,7 @@ const Genre = (props) => {
       <a href="/"><h1 className='appName'>PluggedIn</h1></a>
       <div className={classes.header}>
       <button className={classes.backBtn} onClick={goToHomePage}>
-        <span class="material-symbols-outlined">arrow_back</span> Back
+        <span className="material-symbols-outlined">arrow_back</span> Back
       </button>
       <h1 className={classes.genreName}>{genreName}: Now Playing</h1>
       </div>
