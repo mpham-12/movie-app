@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -11,12 +10,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 
-
 export default function TemporaryDrawer() {
   const [state, setState] = useState(false);
   const [genres, setGenres] = useState([]);
   const navigate = useNavigate();
-
   const API_KEY = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
@@ -44,7 +41,7 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-      style={{ backgroundColor: 'rgba(27, 27, 27, 1)', color:'white', height:'100%' }}
+      style={{ backgroundColor: 'rgba(27, 27, 27, 1)', color: 'white', height: '100%' }}
 
     >
       <List>
@@ -70,7 +67,6 @@ export default function TemporaryDrawer() {
       >
         {list('left')}
       </Drawer>
-
     </div>
   );
 }

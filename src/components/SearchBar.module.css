@@ -35,24 +35,24 @@
 }
 
 .searchButton {
-	/* width: 40%; */
-  	border-radius: 20px;
+	border-radius: 20px;
 	padding: 8px 50px 5px;
 	font-size: 18px;
 	font-family: 'Bebas Neue', cursive;
-  letter-spacing: 2px;
-  background: rgb(14,255,226);
-  background: linear-gradient(87deg, rgba(14,255,226,1) 0%, rgba(53,80,204,1) 100%);
-  border: none;
-  color: white;
-  margin-bottom: 70px;
+	letter-spacing: 2px;
+	background: rgb(14, 255, 226);
+	background: linear-gradient(87deg, rgba(14, 255, 226, 1) 0%, rgba(53, 80, 204, 1) 100%);
+	border: none;
+	color: white;
+	margin-bottom: 70px;
 }
+
 .searchButton:hover {
-cursor: pointer;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 600px) {
-	.form{
+	.form {
 		width: 60%;
 		min-width: 225px;
 		margin-top: 30px;

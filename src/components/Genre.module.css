@@ -1,46 +1,47 @@
-html{
-  height: 100vh;
-  background-color: rgb(9, 9, 9) 17%;
-  color: white;
+html {
+	height: 100vh;
+	background-color: rgb(9, 9, 9) 17%;
+	color: white;
 }
 
-.movies{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  gap: 10px;
-padding: 0px 20px;
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	gap: 10px;
+	padding: 0px 20px;
 }
 
-.backBtn{
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  border: 1px solid transparent;
-  color: white;
-  font-size: 15px;
+.backBtn {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: white;
+	font-size: 15px;
 }
 
-.backBtn:hover{
-cursor: pointer;
+.backBtn:hover {
+	cursor: pointer;
 }
 
-.header{
-  margin-left: 40px;
+.header {
+	margin-left: 40px;
 }
 
-.genreName{
-  font-size: 28px;
-  margin-top: 8px;
+.genreName {
+	font-size: 28px;
+	margin-top: 8px;
 }
 
 @media only screen and (max-width: 600px) {
-  .movies{
-    justify-content: start;
-    padding: 10px;
-  gap: 10px 0px;
-  }
-  .header{
-    margin-left: 20px;
-  }
+	.movies {
+		justify-content: start;
+		padding: 10px;
+		gap: 10px 0px;
+	}
+  
+	.header {
+		margin-left: 20px;
+	}
 }
