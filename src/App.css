@@ -2,6 +2,7 @@
 
 .App {
 	text-align: center;
+	width: auto;
 }
 
 .featuredTitle {
@@ -90,6 +91,7 @@ padding-right: 5%;}
 @media only screen and (max-width: 600px) {
 	.genres{
 		text-align: center;
+		padding: 0;
 	}
 	#appName {
 	margin-bottom: 20px;
