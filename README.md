@@ -1,9 +1,8 @@
 # PluggedIn
 
 PluggedIn is an app that displays updated movie information using TMDB's API. Users can search for a movie to view it's general information such as description, rating, and release date. Users can  filter through movies by genre and categories, which are constantly updating. Built using React, React Router, HTML, CSS, and TMDB API.
-/n
-/n
-Before running this application, please visit <a href='https://cors-anywhere.herokuapp.com/corsdemo'>this link</a> and allow temporary access to the server.
+
+**Before running this application, please visit <a href='https://cors-anywhere.herokuapp.com/corsdemo'>this link</a> and allow temporary access to the server.**
 
 ## Features
 
